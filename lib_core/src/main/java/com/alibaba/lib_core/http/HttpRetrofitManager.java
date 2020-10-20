@@ -46,5 +46,5 @@ public class HttpRetrofitManager {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
-    
+
 }
