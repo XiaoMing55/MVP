@@ -20,10 +20,16 @@ public class HttpRetrofitManager {
     }
 
     private Retrofit retrofit;
+    private String urlPath = "";
 
     public Retrofit getRetrofit(String url) {
         if (retrofit == null) {
             create(url);
+            urlPath = url;
+        }else {
+            if (!urlPath.equals(url)){
+                create(url);
+            }
         }
         return retrofit;
     }
